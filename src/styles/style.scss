@@ -1,0 +1,88 @@
+.wp-block-create-block-posts-layout-block {
+    .posts__layout {
+        &-row {
+            display: grid;
+            gap: 1.25rem;
+            margin: 2rem 0;
+            // Grid Layout
+            &[data-layout="grid"] {
+                grid-template-columns: repeat(3, 1fr);
+                @media (max-width: 981px) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                
+                @media (max-width: 600px) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+                
+            }
+
+            // List Layout
+            &[data-layout="list"] {
+                grid-template-columns: 1fr;
+                .posts__layout-col {
+                    display: grid;
+                    grid-template-columns: 30% 1fr;
+                    gap: 1.5rem;
+                    align-items: start;
+
+                    @media (max-width: 600px) {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                .posts__layout-col-image{
+                    margin-bottom: auto;
+                }
+                .posts__layout-col-content{
+                    margin: auto 0;
+                }
+            }
+        }
+
+        &-col {
+            &-link {
+                text-decoration: none;
+            }
+
+            &-image {
+                margin-bottom: 1rem;
+                display: flex;
+                
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    aspect-ratio: 16/9;
+                    border-radius: 15px;
+                }
+            }
+
+            &-content {
+                h3 {
+                    margin: 0 0 1rem;
+                    font-size: 1.5rem;
+                }
+            }
+
+            &-excerpt {
+                color: #666;
+                font-size: 0.9rem;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+            }
+        }
+
+        &-load-more{
+            display: flex;
+            justify-content: center;
+        }
+
+        &-load-button{
+            background-color: black;
+            padding: 0.75rem 1.5rem;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    }
+} 

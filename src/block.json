@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "create-block/posts-layout-block",
+	"version": "0.1.0",
+	"title": "Posts Layout Block",
+	"category": "widgets",
+	"description": "Display your site's posts in a grid layout.",
+	"keywords": ["posts", "layout"],
+	"example": {},
+	"attributes": {
+		"postSettings": {
+			"type": "object",
+			"default": {
+				"layout": "grid",
+				"postsPerPage": -1,
+				"enableLoadMore": false,
+				"loadMoreText": "Load More"
+			}
+		}
+	},
+	"supports": {
+		"color": {
+			"background": true,
+			"text": false
+		},
+		"html": false
+	},
+	"textdomain": "posts-layout-block",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"editorStyle": "file:./index.css"
+}

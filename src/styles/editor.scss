@@ -1,0 +1,11 @@
+/**
+ * Editor-specific styles for the Posts Layout Block
+ * These styles are only applied in the WordPress editor
+ */
+.wp-block-create-block-posts-layout-block {
+    .posts__layout {
+        a{
+            pointer-events: none;
+        }
+    }
+}
